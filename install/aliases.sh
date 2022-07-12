@@ -1,3 +1,7 @@
-echo alias vim='nvim' >> ~/.zshrc 
-echo alias nv='nvim' >> ~/.zshrc 
-echo alias cat='bat' >> ~/.zshrc 
+# change variable $PATH
+PATH="$PATH:/home/kotdimos/.local/bin"
+
+# aliases
+alias vim='nvim'
+alias nv='nvim'
+alias bat='cat'
