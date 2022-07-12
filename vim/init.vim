@@ -275,6 +275,7 @@ imap <C-n>x <ESC>:NERDTreeClose<CR>i
 set guifont=Monaco:h18
 set background=dark
 colorscheme sublimemonokai
+" colorscheme gruvbox
 " colorscheme OceanicNext
 " colorscheme wombat256
 " colorscheme tango
@@ -288,7 +289,7 @@ colorscheme sublimemonokai
 " colorscheme kolor
 " colorscheme gotham
 " colorscheme jellybeans 
-" volorscheme desertEx
+" colorscheme desertEx
 " colorscheme skittles_berry
 " colorscheme skittles_dark
 " colorscheme codeblocks_dark
@@ -320,6 +321,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_python_checkers = ['pylint', 'flake8']
 
 
 " .............................................................................
