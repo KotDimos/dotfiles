@@ -9,6 +9,7 @@ sudo dnf update
 # terminal utilities
 sudo dnf install -y \
                     vim \
+                    nvim \
                     neovim \
                     mpv \
                     gcc \
