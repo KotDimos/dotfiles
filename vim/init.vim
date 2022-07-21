@@ -79,6 +79,9 @@ Plugin 'tpope/vim-surround'
 " bracket highlighting 
 Plugin 'frazrepo/vim-rainbow'
 
+" ansible
+Plugin 'pearofducks/ansible-vim'
+
 call vundle#end()
 
 " Подсветка синтаксиса
