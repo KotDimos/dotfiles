@@ -12,7 +12,7 @@ Plugin 'flazz/vim-colorschemes'
 " status bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-" old 
+" old
 " Plugin 'itchyny/lightline.vim'
 
 " nerdtree
@@ -29,7 +29,7 @@ Plugin 'ErichDonGubler/vim-sublime-monokai'
 " for Languages
 
 " Markdown
-Plugin 'iamcco/markdown-preview.nvim' 
+Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'godlygeek/tabular'
 Plugin 'preservim/vim-markdown'
 
@@ -43,7 +43,7 @@ Plugin 'numirias/semshi'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'tmhedberg/SimpylFold'
 
-" AutoComment 
+" AutoComment
 Plugin 'preservim/nerdcommenter'
 " old
 " Plugin 'tpope/vim-commentary'
@@ -55,7 +55,7 @@ Plugin 'preservim/tagbar'
 Plugin 'sheerun/vim-polyglot'
 
 " CSS
-Plugin 'ap/vim-css-color' 
+Plugin 'ap/vim-css-color'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 
@@ -69,14 +69,14 @@ Plugin 'pangloss/vim-javascript'
 " Syntastic
 Plugin 'vim-syntastic/syntastic'
 
-" Navigation on code 
+" Navigation on code
 Plugin 'mileszs/ack.vim'
 Plugin 'pechorin/any-jump.vim'
 
 " branches
 Plugin 'tpope/vim-surround'
 
-" bracket highlighting 
+" bracket highlighting
 Plugin 'frazrepo/vim-rainbow'
 
 " ansible
@@ -85,7 +85,7 @@ Plugin 'pearofducks/ansible-vim'
 call vundle#end()
 
 " Подсветка синтаксиса
-syntax on 
+syntax on
 " Табуляция автоматически преобразуется в пробелы
 set expandtab
 " Количество пробелов в табе
@@ -113,11 +113,11 @@ set relativenumber
 " Включает определение типа файла, загрузку соответствующих ему плагинов и файлов отступов
 filetype on
 filetype plugin on
-filetype plugin indent on 
+filetype plugin indent on
 " Перенос длинных строк
-set wrap 
-" Подвсветка текущей строки 
-set cursorline 
+set wrap
+" Подвсветка текущей строки
+set cursorline
 " Без бэкапов
 set nobackup
 " Без свап файлов
@@ -129,7 +129,7 @@ set ic
 " текущий буфер можно перевести в фоновый режим
 set hidden
 " Отключает обратную совместимость с Vi
-set nocompatible 
+set nocompatible
 " высота панели команд
 set cmdheight=1
 
@@ -147,9 +147,9 @@ highlight BadWhitespace ctermbg=red guibg=red
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.cpp match BadWhitespace /\s\+$/
 
 
-set termencoding=utf-8 
-set novisualbell 
-set t_vb= 
+set termencoding=utf-8
+set novisualbell
+set t_vb=
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 set showtabline=1
 
@@ -291,7 +291,7 @@ colorscheme sublimemonokai
 " colorscheme neodark
 " colorscheme kolor
 " colorscheme gotham
-" colorscheme jellybeans 
+" colorscheme jellybeans
 " colorscheme desertEx
 " colorscheme skittles_berry
 " colorscheme skittles_dark
@@ -332,7 +332,7 @@ let g:syntastic_python_checkers = ['pylint', 'flake8']
 " mileszs/ack.vim
 " .............................................................................
 
-noremap <F4> :Ack! <cword> --ignore-dir={static,logs,files}<cr> 
+noremap <F4> :Ack! <cword> --ignore-dir={static,logs,files}<cr>
 noremap <S-F4> :Ack! --ignore-dir={static,logs,files}
 
 
@@ -361,7 +361,7 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
+" Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
 
 

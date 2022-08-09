@@ -15,7 +15,7 @@
 - name: remove old init.vim
   ansible.builtin.file:
     path: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
-    state: absent  
+    state: absent
 
 - name: hard link on init.vim
   ansible.builtin.file:
@@ -25,10 +25,10 @@
 
 - name: instructions for further installation of vim
   ansible.builtin.debug:
-    msg: "vim PluginInstall && 
-      cd {{ansible_env.HOME }}/.config/nvim/bundle/coc.nvim && 
-      npm install -g yarn && 
-      yarn install && 
-      yarn build && 
+    msg: "vim PluginInstall &&
+      cd {{ansible_env.HOME }}/.config/nvim/bundle/coc.nvim &&
+      npm install -g yarn &&
+      yarn install &&
+      yarn build &&
       pip3 install jedi"
 
