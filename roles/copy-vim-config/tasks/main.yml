@@ -1,0 +1,34 @@
+---
+- name: git clone vundle
+  ansible.builtin.git:
+    repo: https://github.com/VundleVim/Vundle.vim.git
+    dest: "{{ ansible_env.HOME }}/.config/nvim/bundle/Vundle.vim"
+
+- name: install packages for vim
+  become: yes
+  ansible.builtin.dnf:
+    name:
+      - nodejs
+      - npm
+    state: latest
+
+- name: remove old init.vim
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
+    state: absent  
+
+- name: hard link on init.vim
+  ansible.builtin.file:
+    src: "{{ ansible_env.HOME }}/.dotfiles/vim/init.vim"
+    dest: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
+    state: hard
+
+- name: instructions for further installation of vim
+  ansible.builtin.debug:
+    msg: "vim PluginInstall && 
+      cd {{ansible_env.HOME }}/.config/nvim/bundle/coc.nvim && 
+      npm install -g yarn && 
+      yarn install && 
+      yarn build && 
+      pip3 install jedi"
+

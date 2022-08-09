@@ -1,0 +1,31 @@
+---
+- name: test
+  community.general.git_config:
+    name: alias.st
+    scope: global
+    value: status
+    state: absent
+
+- name: Add a username to ~/.gitconfig
+  community.general.git_config:
+    name: user.name
+    scope: global
+    value: "{{ git_settings_username }}"
+
+- name: Add a email to ~/.gitconfig
+  community.general.git_config:
+    name: user.email
+    scope: global
+    value: "{{ git_settings_email }}"
+
+- name: Add a editor to ~/.gitconfig
+  community.general.git_config:
+    name: core.editor
+    scope: global
+    value: "{{ git_settings_core_editor }}"
+
+- name: Add a alias tree to ~/.gitconfig
+  community.general.git_config:
+    name: alias.tree
+    scope: global
+    value: log --all --decorate --oneline --graph

@@ -1,0 +1,47 @@
+---
+- name: dnf isntall packages
+  become: yes
+  ansible.builtin.dnf:
+    name:
+      - git
+      - zsh
+    state: latest
+
+# - name: remove dir oh-my-zsh
+#   ansible.builtin.file:
+#     path: "{{ ansible_env.HOME }}/.oh-my-zsh"
+#     state: absent
+
+- name: install oh-my-zsh
+  ansible.builtin.git:
+    repo: https://github.com/ohmyzsh/ohmyzsh.git
+    dest: ~/.oh-my-zsh
+
+- name: git clone zsh-syntax-highlighting
+  ansible.builtin.git:
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+
+- name: git clone powerlevel10k
+  ansible.builtin.git:
+    repo: https://github.com/romkatv/powerlevel10k.git
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/themes/powerlevel10k"
+
+- name: git clone zsh-autosuggestions
+  ansible.builtin.git:
+    repo: https://github.com/zsh-users/zsh-autosuggestions
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+
+- name: remove old zshrc
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/.zshrc"
+    state: absent
+
+- name: hard link on zshrc
+  ansible.builtin.file:
+    src: "{{ ansible_env.HOME }}/.dotfiles/.zshrc"
+    dest: ~/.zshrc
+    state: hard
+    owner: "{{ ansible_ssh_user }}"
+    group: "{{ ansible_ssh_user }}"
+    mode: 0660

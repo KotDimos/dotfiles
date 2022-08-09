@@ -1,0 +1,11 @@
+---
+- name: install git
+  become: yes
+  ansible.builtin.dnf:
+    name: git
+    state: latest
+
+- name: clone dotfiles
+  ansible.builtin.git:
+    repo: https://github.com/KotDimos/dotfiles.git
+    dest: "{{ ansible_env.HOME }}/.dotfiles"
