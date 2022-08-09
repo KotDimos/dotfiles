@@ -1,7 +1,17 @@
 #!/usr/bin/env bash
 
-# Скрипт на удаление пробелов и табуляции в конце строки файла.
-for file in "$@"
+# Скрипт на удаление пробелов и табуляции в конце строки файлов.
+for arg in "$@"
 do
-    sed -ri 's/[[:blank:]]*$//' $file
+    if [[ -d "$arg" ]]
+    then
+        for file in $(find $arg -type f -name "*")
+        do
+            sed -ri 's/[[:blank:]]*$//' "$file"
+            echo "$file"
+        done
+    else
+        sed -ri 's/[[:blank:]]*$//' "$arg"
+        echo "$arg"
+    fi
 done
