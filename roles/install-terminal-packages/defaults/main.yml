@@ -2,6 +2,8 @@
 packages:
   - gcc
   - glibc-static
+  - python3-pip
+  - util-linux-user
   - vim
   - neovim
   - bat
