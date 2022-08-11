@@ -1,11 +1,4 @@
 ---
-- name: test
-  community.general.git_config:
-    name: alias.st
-    scope: global
-    value: status
-    state: absent
-
 - name: Add a username to ~/.gitconfig
   community.general.git_config:
     name: user.name
