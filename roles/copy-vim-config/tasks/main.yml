@@ -27,7 +27,7 @@
   ansible.builtin.debug:
     msg: "vim PluginInstall &&
       cd {{ansible_env.HOME }}/.config/nvim/bundle/coc.nvim &&
-      npm install -g yarn &&
+      sudo npm install -g yarn &&
       yarn install &&
       yarn build &&
       pip3 install jedi"
