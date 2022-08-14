@@ -1,16 +1,24 @@
 ---
-- name: git clone vundle
-  ansible.builtin.git:
-    repo: https://github.com/VundleVim/Vundle.vim.git
-    dest: "{{ ansible_env.HOME }}/.config/nvim/bundle/Vundle.vim"
-
 - name: install packages for vim
   become: yes
   ansible.builtin.dnf:
     name:
       - nodejs
       - npm
+      - python3-pip
     state: latest
+
+- name: Install pip packages
+  ansible.builtin.pip:
+    name:
+      - pylint
+      - pynvim
+
+- name: git clone vundle
+  ansible.builtin.git:
+    repo: https://github.com/VundleVim/Vundle.vim.git
+    dest: "{{ ansible_env.HOME }}/.config/nvim/bundle/Vundle.vim"
+
 
 - name: remove old init.vim
   ansible.builtin.file:
