@@ -60,7 +60,6 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 
 " HTML
-Plugin 'rstacruz/sparkup'
 Plugin 'AndrewRadev/tagalong.vim'
 
 " JS
@@ -178,7 +177,7 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " Вместо esc
-imap qq <Esc>
+imap jj <Esc>
 
 " Совместимость с русской клавиатурой
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
@@ -264,12 +263,12 @@ let g:mkdp_refresh_slow=1
 " preservim/nerdtree
 " .............................................................................
 
-nmap <C-n> :NERDTree<CR>
-vmap <C-n> <ESC>:NERDTree<CR>i
-imap <C-n> <ESC>:NERDTree<CR>i
-nmap <C-n>x :NERDTreeClose<CR>
-vmap <C-n>x <ESC>:NERDTreeClose<CR>i
-imap <C-n>x <ESC>:NERDTreeClose<CR>i
+nmap <C-x> :NERDTree<CR>
+vmap <C-x> <ESC>:NERDTree<CR>i
+imap <C-x> <ESC>:NERDTree<CR>i
+nmap <C-x>x :NERDTreeClose<CR>
+vmap <C-x>x <ESC>:NERDTreeClose<CR>i
+imap <C-x>x <ESC>:NERDTreeClose<CR>i
 
 
 " .............................................................................
@@ -310,7 +309,7 @@ nmap <F8> :TagbarOpen f<CR>
 " iamcco/markdown-preview.nvim
 " .............................................................................
 
-nmap <C-m> ::MarkdownPreview<CR>
+" nmap <C-m> :MarkdownPreview<CR>
 
 
 " .............................................................................
