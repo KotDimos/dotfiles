@@ -1,0 +1,13 @@
+---
+- name: remove old init.vim
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
+    state: absent
+
+- name: hard link on init.vim
+  ansible.builtin.file:
+    src: "{{ ansible_env.HOME }}/.dotfiles/vim/init.vim"
+    dest: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
+    state: hard
+
+
