@@ -110,6 +110,7 @@ set number
 " Относительные номера строк
 set relativenumber
 " Включает определение типа файла, загрузку соответствующих ему плагинов и файлов отступов
+set colorcolumn=100
 filetype on
 filetype plugin on
 filetype plugin indent on
