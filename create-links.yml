@@ -1,0 +1,5 @@
+- hosts: local
+  roles:
+    - link-scripts
+    - link-vim-config
+    - link-zsh-config
