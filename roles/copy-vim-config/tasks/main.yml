@@ -20,17 +20,6 @@
     dest: "{{ ansible_env.HOME }}/.config/nvim/bundle/Vundle.vim"
 
 
-- name: remove old init.vim
-  ansible.builtin.file:
-    path: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
-    state: absent
-
-- name: hard link on init.vim
-  ansible.builtin.file:
-    src: "{{ ansible_env.HOME }}/.dotfiles/vim/init.vim"
-    dest: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
-    state: hard
-
 - name: instructions for further installation of vim
   ansible.builtin.debug:
     msg: "vim PluginInstall &&

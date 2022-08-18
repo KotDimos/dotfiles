@@ -32,16 +32,3 @@
     repo: https://github.com/zsh-users/zsh-autosuggestions
     dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
 
-- name: remove old zshrc
-  ansible.builtin.file:
-    path: "{{ ansible_env.HOME }}/.zshrc"
-    state: absent
-
-- name: hard link on zshrc
-  ansible.builtin.file:
-    src: "{{ ansible_env.HOME }}/.dotfiles/.zshrc"
-    dest: "{{ ansible_env.HOME }}/.zshrc"
-    state: hard
-    owner: "{{ ansible_ssh_user }}"
-    group: "{{ ansible_ssh_user }}"
-    mode: 0660
