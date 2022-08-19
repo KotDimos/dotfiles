@@ -17,6 +17,12 @@
     scope: global
     value: "{{ git_settings_core_editor }}"
 
+- name: Add autocorrect
+  community.general.git_config:
+    name: help.autocorrect
+    scope: global
+    value: 1
+
 - name: Add a alias tree to ~/.gitconfig
   community.general.git_config:
     name: alias.tree
