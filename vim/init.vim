@@ -264,12 +264,12 @@ let g:mkdp_refresh_slow=1
 " preservim/nerdtree
 " .............................................................................
 
-nmap <C-x> :NERDTree<CR>
-vmap <C-x> <ESC>:NERDTree<CR>i
-imap <C-x> <ESC>:NERDTree<CR>i
-nmap <C-x>x :NERDTreeClose<CR>
-vmap <C-x>x <ESC>:NERDTreeClose<CR>i
-imap <C-x>x <ESC>:NERDTreeClose<CR>i
+nmap <C-g> :NERDTree<CR>
+vmap <C-g> <ESC>:NERDTree<CR>i
+imap <C-g> <ESC>:NERDTree<CR>i
+nmap <C-g>x :NERDTreeClose<CR>
+vmap <C-g>x <ESC>:NERDTreeClose<CR>i
+imap <C-g>x <ESC>:NERDTreeClose<CR>i
 
 
 " .............................................................................
@@ -286,7 +286,6 @@ colorscheme sublimemonokai
 " colorscheme railscasts
 " colorscheme vividchalk
 " colorscheme distinguished
-" colorscheme monokai
 " colorscheme molokai
 " colorscheme ir_black
 " colorscheme neodark
