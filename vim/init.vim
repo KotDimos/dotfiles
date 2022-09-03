@@ -61,6 +61,7 @@ Plugin 'hail2u/vim-css3-syntax'
 
 " HTML
 Plugin 'AndrewRadev/tagalong.vim'
+Plugin 'mattn/emmet-vim'
 
 " JS
 Plugin 'pangloss/vim-javascript'
@@ -364,6 +365,14 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
+
+
+" .............................................................................
+" mattn/emmet-vim
+" .............................................................................
+
+"enable all function in all mode.
+let g:user_emmet_mode='a'
 
 
 " .............................................................................
