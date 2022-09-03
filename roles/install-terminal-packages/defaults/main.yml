@@ -1,6 +1,7 @@
 ---
 packages:
   - gcc
+  - g++
   - glibc-static
   - python3-pip
   - util-linux-user
