@@ -395,6 +395,7 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 
 let g:coc_global_extensions=[
             \'coc-css',
+            \'coc-html',
             \'coc-json',
             \'coc-tsserver',
             \'coc-java',
