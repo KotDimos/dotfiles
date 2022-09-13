@@ -23,6 +23,12 @@
     scope: global
     value: 1
 
+- name: Add auto pull --rebase
+  community.general.git_config:
+    name: pull.rebase
+    scope: global
+    value: true
+
 - name: Add a alias tree to ~/.gitconfig
   community.general.git_config:
     name: alias.tree
