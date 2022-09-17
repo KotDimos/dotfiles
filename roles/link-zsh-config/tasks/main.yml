@@ -6,7 +6,7 @@
 
 - name: hard link on zshrc
   ansible.builtin.file:
-    src: "{{ ansible_env.HOME }}/.dotfiles/.zshrc"
+    src: "{{ role_path }}/files/.zshrc"
     dest: "{{ ansible_env.HOME }}/.zshrc"
     state: hard
     owner: "{{ ansible_ssh_user }}"
