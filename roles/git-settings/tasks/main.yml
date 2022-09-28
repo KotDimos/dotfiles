@@ -34,3 +34,9 @@
     name: alias.tree
     scope: global
     value: log --all --decorate --oneline --graph
+
+- name: Add rerere
+  community.general.git_config:
+    name: rerere.enabled
+    scope: global
+    value: true
