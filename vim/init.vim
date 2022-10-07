@@ -41,7 +41,8 @@ Plugin 'neoclide/coc.nvim'
 Plugin 'numirias/semshi'
 " standard pep-8
 Plugin 'Vimjas/vim-python-pep8-indent'
-Plugin 'tmhedberg/SimpylFold'
+" fold directives
+" Plugin 'tmhedberg/SimpylFold'
 
 " AutoComment
 Plugin 'preservim/nerdcommenter'
