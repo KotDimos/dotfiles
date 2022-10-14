@@ -1,7 +1,7 @@
 ---
 - name: find all files in ~/.dotfiles/scripts
   ansible.builtin.find:
-    paths: "{{ ansible_env.HOME }}/.dotfiles/scripts"
+    paths: "{{ role_path }}/files"
   register: find_scripts
 
 - name: remove dir for scripts
@@ -16,7 +16,7 @@
 
 - name: copy scripts
   ansible.builtin.file:
-    src: "{{ ansible_env.HOME }}/.dotfiles/scripts/{{ item.path | basename }}"
-    path: "{{ ansible_env.HOME }}/scripts/{{item.path | basename}}"
+    src: "{{ role_path }}/files/{{ item.path | basename }}"
+    path: "{{ ansible_env.HOME }}/scripts/{{ item.path | basename }}"
     state: hard
   with_items: "{{ find_scripts.files }}"
