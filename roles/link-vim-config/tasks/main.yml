@@ -6,7 +6,7 @@
 
 - name: hard link on init.vim
   ansible.builtin.file:
-    src: "{{ ansible_env.HOME }}/.dotfiles/vim/init.vim"
+    src: "{{ role_path }}/files/init.vim"
     dest: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
     state: hard
 
