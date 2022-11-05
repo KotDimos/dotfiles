@@ -32,3 +32,5 @@
     repo: https://github.com/zsh-users/zsh-autosuggestions
     dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
 
+- name: change standart shell
+  ansible.builtin.shell: "chsh -s $(which zsh)"
