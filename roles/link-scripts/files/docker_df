@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+if ! [[ -d "$HOME/scripts/.docker_df" ]]
+then
+    mkdir -p "$HOME/scripts/.docker_df"
+fi
+
+docker system df -v > ~/scripts/.docker_df/all_docker_df
+
+line_containers=$(cat ~/scripts/.docker_df/all_docker_df | grep -n "Containers space usage" | awk -F':' '{print $1}')
+line_images=$(cat ~/scripts/.docker_df/all_docker_df | grep -n "Images space usage" | awk -F':' '{print $1}')
+line_volumes=$(cat ~/scripts/.docker_df/all_docker_df | grep -n "Local Volumes space usage" | awk -F':' '{print $1}')
+line_caches=$(cat ~/scripts/.docker_df/all_docker_df | grep -n "Build cache usage" | awk -F':' '{print $1}')
+
+cat ~/scripts/.docker_df/all_docker_df | sed "$line_containers,$ d" | tail -n +$line_images > ~/scripts/.docker_df/images_docker_df
+cat ~/scripts/.docker_df/all_docker_df | sed "$line_volumes,$ d" | tail -n +$line_containers > ~/scripts/.docker_df/containers_docker_df
+cat ~/scripts/.docker_df/all_docker_df | sed "$line_caches,$ d" | tail -n +$line_volumes > ~/scripts/.docker_df/volumes_docker_df
+
+cat ~/scripts/.docker_df/images_docker_df | sort -nk 10 >> ~/scripts/.docker_df/images_docker_df_sorted
+
