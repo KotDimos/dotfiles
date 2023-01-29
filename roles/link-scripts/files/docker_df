@@ -15,6 +15,7 @@ line_caches=$(cat ./.docker_df/all_docker_df | grep -n "Build cache usage" | awk
 cat ./.docker_df/all_docker_df | sed "$line_containers,$ d" | tail -n +$line_images > ./.docker_df/images_docker_df
 cat ./.docker_df/all_docker_df | sed "$line_volumes,$ d" | tail -n +$line_containers > ./.docker_df/containers_docker_df
 cat ./.docker_df/all_docker_df | sed "$line_caches,$ d" | tail -n +$line_volumes > ./.docker_df/volumes_docker_df
+cat ./.docker_df/all_docker_df | tail -n +$line_caches > ./.docker_df/caches_docker_df
 
 cat ./.docker_df/images_docker_df | sort -nk 10 > ./.docker_df/images_docker_df_sorted
 
