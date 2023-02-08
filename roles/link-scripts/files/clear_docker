@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+
+function clear_volumes() {
+    echo $(date) >> ./.clear_docker_logs/docker_volumes.log
+    echo $(date) >> ./.clear_docker_logs/docker_volumes.err
+
+    docker volume ls --filter dangling=true --filter name="^[a-f0-9]{64}$" | awk '{print $2}' | tail +2 | xargs -r docker volume rm \
+        >> ./.clear_docker_logs/docker_volumes.log \
+        2>> ./.clear_docker_logs/docker_volumes.err
+
+    echo "" >> ./.clear_docker_logs/docker_volumes.log
+    echo "" >> ./.clear_docker_logs/docker_volumes.err
+}
+
+
+function clear_images() {
+    echo $(date) >> ./.clear_docker_logs/docker_images.log
+    echo $(date) >> ./.clear_docker_logs/docker_images.err
+
+    docker image ls --filter dangling=true | awk '{print $3}' | tail +2 | xargs -r docker rmi \
+        >> ./.clear_docker_logs/docker_images.log \
+        2>> ./.clear_docker_logs/docker_images.err
+
+    echo "" >> ./.clear_docker_logs/docker_images.log
+    echo "" >> ./.clear_docker_logs/docker_images.err
+}
+
+
+case $1 in
+    -v | --clear-volumes)
+        clear_volumes
+        ;;
+    -i | --clear-images)
+        clear_images
+        ;;
+    -h | --help)
+        echo "-v | --clean-volumes - clean dangling volumes"
+        echo "-i | --clean-images - clean dangling images"
+        ;;
+    *)
+        echo "error. Use: option -h"
+        ;;
+esac
+
