@@ -34,7 +34,7 @@ function clear_build() {
     echo $(date) >> ./.clear_docker_logs/docker_build.log
     echo $(date) >> ./.clear_docker_logs/docker_build.err
 
-    docker builder prune \
+    echo "y" | docker builder prune \
         >> ./.clear_docker_logs/docker_build.log \
         2>> ./.clear_docker_logs/docker_build.err
 
