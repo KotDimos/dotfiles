@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if ! [[ -d "./.clear_docker_logs" ]]
+then
+    mkdir "./.clear_docker_logs"
+fi
 
 function clear_volumes() {
     echo $(date) >> ./.clear_docker_logs/docker_volumes.log
