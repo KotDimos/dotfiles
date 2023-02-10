@@ -9,7 +9,7 @@ function clear_volumes() {
     echo $(date) >> ./.clear_docker_logs/docker_volumes.log
     echo $(date) >> ./.clear_docker_logs/docker_volumes.err
 
-    docker volume ls --filter dangling=true --filter name="^[a-f0-9]{64}$" | awk '{print $2}' | tail +2 | xargs -r docker volume rm \
+    docker volume ls --filter dangling=true --filter name="^[a-f0-9]{64}$" | awk '{print $2}' | tail -n +2 | xargs -r docker volume rm \
         >> ./.clear_docker_logs/docker_volumes.log \
         2>> ./.clear_docker_logs/docker_volumes.err
 
@@ -22,7 +22,7 @@ function clear_images() {
     echo $(date) >> ./.clear_docker_logs/docker_images.log
     echo $(date) >> ./.clear_docker_logs/docker_images.err
 
-    docker image ls --filter dangling=true | awk '{print $3}' | tail +2 | xargs -r docker rmi \
+    docker image ls --filter dangling=true | awk '{print $3}' | tail -n +2 | xargs -r docker rmi \
         >> ./.clear_docker_logs/docker_images.log \
         2>> ./.clear_docker_logs/docker_images.err
 
