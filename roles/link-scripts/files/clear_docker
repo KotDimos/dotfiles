@@ -30,6 +30,17 @@ function clear_images() {
     echo "" >> ./.clear_docker_logs/docker_images.err
 }
 
+function clear_build() {
+    echo $(date) >> ./.clear_docker_logs/docker_build.log
+    echo $(date) >> ./.clear_docker_logs/docker_build.err
+
+    docker builder prune \
+        >> ./.clear_docker_logs/docker_build.log \
+        2>> ./.clear_docker_logs/docker_build.err
+
+    echo "" >> ./.clear_docker_logs/docker_build.log
+    echo "" >> ./.clear_docker_logs/docker_build.err
+}
 
 case $1 in
     -v | --clear-volumes)
