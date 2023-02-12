@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+
 if ! [[ -d "./.clear_docker_logs" ]]
 then
     mkdir "./.clear_docker_logs"
 fi
+
 
 function clear_volumes() {
     echo $(date) >> ./.clear_docker_logs/docker_volumes.log
@@ -30,6 +32,7 @@ function clear_images() {
     echo "" >> ./.clear_docker_logs/docker_images.err
 }
 
+
 function clear_build() {
     echo $(date) >> ./.clear_docker_logs/docker_build.log
     echo $(date) >> ./.clear_docker_logs/docker_build.err
@@ -41,6 +44,7 @@ function clear_build() {
     echo "" >> ./.clear_docker_logs/docker_build.log
     echo "" >> ./.clear_docker_logs/docker_build.err
 }
+
 
 case $1 in
     -v | --clear-volumes)
