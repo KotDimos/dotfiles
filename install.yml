@@ -1,8 +1,0 @@
-- hosts: local
-  roles:
-    - clone-dotfiles
-    - install-terminal-packages
-    # - install-gui-packages
-    - git-settings
-    - install-zsh
-    - copy-vim-config
