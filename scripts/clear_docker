@@ -56,10 +56,16 @@ case $1 in
     -b | --clear-build)
         clear_build
         ;;
+    -a | --all)
+        clear_volumes
+        clear_images
+        clear_build
+        ;;
     -h | --help)
         echo "-v | --clean-volumes - clean dangling volumes"
         echo "-i | --clean-images - clean dangling images"
         echo "-b | --clean-build - clean dangling build"
+        echo "-a | --all - clean all"
         ;;
     *)
         echo "error. Use: option -h"
