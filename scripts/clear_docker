@@ -62,10 +62,10 @@ case $1 in
         clear_build
         ;;
     -h | --help)
-        echo "-v | --clean-volumes - clean dangling volumes"
-        echo "-i | --clean-images - clean dangling images"
-        echo "-b | --clean-build - clean dangling build"
-        echo "-a | --all - clean all"
+        echo "-v | --clear-volumes - clear dangling volumes"
+        echo "-i | --clear-images - clear dangling images"
+        echo "-b | --clear-build - clear dangling build"
+        echo "-a | --all - clear all"
         ;;
     *)
         echo "error. Use: option -h"
