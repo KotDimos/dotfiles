@@ -68,6 +68,7 @@ Plugin 'mattn/emmet-vim'
 
 " JS
 Plugin 'pangloss/vim-javascript'
+Plugin 'eslint/eslint'
 
 " Syntastic
 Plugin 'vim-syntastic/syntastic'
