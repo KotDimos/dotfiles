@@ -8,6 +8,7 @@ fi
 
 
 function clear_volumes() {
+    echo "start clear volumes"
     echo $(date) >> ./.clear_docker_logs/docker_volumes.log
     echo $(date) >> ./.clear_docker_logs/docker_volumes.err
 
@@ -17,10 +18,13 @@ function clear_volumes() {
 
     echo "" >> ./.clear_docker_logs/docker_volumes.log
     echo "" >> ./.clear_docker_logs/docker_volumes.err
+
+    echo "end clear volumes"
 }
 
 
 function clear_images() {
+    echo "start clear images"
     echo $(date) >> ./.clear_docker_logs/docker_images.log
     echo $(date) >> ./.clear_docker_logs/docker_images.err
 
@@ -30,10 +34,13 @@ function clear_images() {
 
     echo "" >> ./.clear_docker_logs/docker_images.log
     echo "" >> ./.clear_docker_logs/docker_images.err
+
+    echo "end clear images"
 }
 
 
 function clear_build() {
+    echo "start clear build"
     echo $(date) >> ./.clear_docker_logs/docker_build.log
     echo $(date) >> ./.clear_docker_logs/docker_build.err
 
@@ -43,6 +50,8 @@ function clear_build() {
 
     echo "" >> ./.clear_docker_logs/docker_build.log
     echo "" >> ./.clear_docker_logs/docker_build.err
+
+    echo "end clear build"
 }
 
 
