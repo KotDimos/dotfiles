@@ -118,7 +118,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # change variable $PATH
-PATH="$PATH:/home/kotdimos/.local/bin"
+PATH="$PATH:$HOME/.local/bin"
 
 # aliases
 alias vim='nvim'
