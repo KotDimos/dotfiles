@@ -1,21 +1,22 @@
 #!/usr/bin/env bash
 
-if ! [[ -d "./.docker_df" ]]
+PATH_LOGS="$HOME/.docker_df"
+
+if ! [[ -d "$PATH_LOGS" ]]
 then
-    mkdir "./.docker_df"
+    mkdir "$PATH_LOGS"
 fi
 
-docker system df -v > ./.docker_df/all_docker_df
+docker system df -v > "$PATH_LOGS/all_docker_df"
 
-line_containers=$(cat ./.docker_df/all_docker_df | grep -n "Containers space usage" | awk -F':' '{print $1}')
-line_images=$(cat ./.docker_df/all_docker_df | grep -n "Images space usage" | awk -F':' '{print $1}')
-line_volumes=$(cat ./.docker_df/all_docker_df | grep -n "Local Volumes space usage" | awk -F':' '{print $1}')
-line_caches=$(cat ./.docker_df/all_docker_df | grep -n "Build cache usage" | awk -F':' '{print $1}')
+line_containers=$(cat "$PATH_LOGS/all_docker_df" | grep -n "Containers space usage" | awk -F':' '{print $1}')
+line_images=$(cat "$PATH_LOGS/all_docker_df" | grep -n "Images space usage" | awk -F':' '{print $1}')
+line_volumes=$(cat "$PATH_LOGS/all_docker_df" | grep -n "Local Volumes space usage" | awk -F':' '{print $1}')
+line_caches=$(cat "$PATH_LOGS/all_docker_df" | grep -n "Build cache usage" | awk -F':' '{print $1}')
 
-cat ./.docker_df/all_docker_df | sed "$line_containers,$ d" | tail -n +$line_images > ./.docker_df/images_docker_df
-cat ./.docker_df/all_docker_df | sed "$line_volumes,$ d" | tail -n +$line_containers > ./.docker_df/containers_docker_df
-cat ./.docker_df/all_docker_df | sed "$line_caches,$ d" | tail -n +$line_volumes > ./.docker_df/volumes_docker_df
-cat ./.docker_df/all_docker_df | tail -n +$line_caches > ./.docker_df/caches_docker_df
-
-cat ./.docker_df/images_docker_df | sort -nk 10 > ./.docker_df/images_docker_df_sorted
+cat "$PATH_LOGS/all_docker_df" | sed "$line_containers,$ d" | tail -n +$line_images > "$PATH_LOGS/images_docker_df"
+cat "$PATH_LOGS/all_docker_df" | sed "$line_volumes,$ d" | tail -n +$line_containers > "$PATH_LOGS/containers_docker_df"
+cat "$PATH_LOGS/all_docker_df" | sed "$line_caches,$ d" | tail -n +$line_volumes > "$PATH_LOGS/volumes_docker_df"
+cat "$PATH_LOGS/all_docker_df" | tail -n +$line_caches > "$PATH_LOGS/caches_docker_df"
+cat "$PATH_LOGS/images_docker_df" | sort -nk 10 > "$PATH_LOGS/images_docker_df_sorted"
 
