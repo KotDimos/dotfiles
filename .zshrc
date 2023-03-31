@@ -119,6 +119,7 @@ source $ZSH/oh-my-zsh.sh
 
 # change variable $PATH
 PATH="$PATH:$HOME/.local/bin"
+PATH="$PATH:$HOME/bin"
 
 # aliases
 alias vim='nvim'
