@@ -81,6 +81,7 @@ plugins=( git
           docker-compose
           kubectl
           dnf
+          helm
           zsh-syntax-highlighting
           zsh-autosuggestions
         )
