@@ -4,8 +4,6 @@
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin('~/.config/nvim/bundle/')
 
-Plugin 'KotDimos/better-comments.vim'
-
 Plugin 'VundleVim/Vundle.vim'
 
 " color schemes
@@ -406,10 +404,3 @@ let g:coc_global_extensions=[
             \'coc-highlight',
             \]
 
-
-" .............................................................................
-" KotDimos/better-comments.vim
-" .............................................................................
-
-nnoremap <buffer> <localleader>bc :call bettercomments#Enable()<cr>
-autocmd BufReadPost * call bettercomments#Enable()
