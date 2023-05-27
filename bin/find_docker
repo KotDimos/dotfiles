@@ -6,4 +6,4 @@ then
     exit
 fi
 
-docker ps -a | grep $1
+docker ps -a | grep --color $1
