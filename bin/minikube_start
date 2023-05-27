@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# - get all versions
+# minikube config defaults kubernetes-version
+
+# - for a specific version, use the flag
+# --kubernetes-version=v1.26.5
+
+minikube delete --all && minikube start --memory 3G
