@@ -12,4 +12,7 @@
     * `docker_logs_df` - просмотр размера логов контейнеров.
     * `docker_df` - анализ и вывод данных docker.
     * `find_docker` - поиск контейнеров по определённому параметру.
+    * `minikube_delete` - удаление minikube.
+    * `minikube_start` - старт minikube.
+    * `minikube_update` - установка или обновление minikube.
     * `tmux_start` - запуск tmux.
