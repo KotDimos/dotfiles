@@ -28,6 +28,9 @@ Plugin 'ErichDonGubler/vim-sublime-monokai'
 
 " for Languages
 
+" Golang
+Plugin 'fatih/vim-go'
+
 " Markdown
 Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'godlygeek/tabular'
