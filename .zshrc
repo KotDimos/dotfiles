@@ -80,6 +80,7 @@ plugins=( git
           docker
           docker-compose
           kubectl
+          mvn
           dnf
           helm
           zsh-syntax-highlighting
@@ -121,11 +122,11 @@ source $ZSH/oh-my-zsh.sh
 # change variable $PATH
 PATH="$PATH:$HOME/.local/bin"
 PATH="$PATH:$HOME/bin"
+PATH="$PATH:$GOPATH/bin"
+
+export GOPATH="$HOME/.go"
 
 # aliases
-alias vim='nvim'
-alias nv='nvim'
-alias v='nvim'
-alias cat='bat'
-alias sdi="sudo dnf install"
-alias du1='du -h -d 1'
+alias vim="nvim"
+alias cat="bat"
+alias du1="du -h -d 1"
