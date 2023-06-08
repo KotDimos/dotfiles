@@ -16,3 +16,7 @@
     * `minikube_start` - старт minikube.
     * `minikube_update` - установка или обновление minikube.
     * `tmux_start` - запуск tmux.
+
+# Клонирование
+
+    git clone $HOME/.dotfiles
