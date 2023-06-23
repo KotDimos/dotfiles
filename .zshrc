@@ -125,6 +125,8 @@ PATH="$PATH:$HOME/bin"
 PATH="$PATH:$GOPATH/bin"
 
 export GOPATH="$HOME/.go"
+export PY_COLORS=1
+export EDITOR=nvim
 
 # aliases
 alias vim="nvim"
