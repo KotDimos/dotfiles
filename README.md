@@ -6,6 +6,7 @@
 * `.tmux.conf` - конфигурация для tmux.
 * `init.vim` - конфигурация для vim/neovim.
 * `bin` - скрипты для системы.
+    * `ansible_check` - проверка ansible кода с помощью linters.
     * `clear_docker` - очистка docker от лишних данных.
     * `ctop_monitoring` - запуск ctop мониторинга в контейнере.
     * `delete_whitespace` - удаление лишних пробелов в конце строки.
