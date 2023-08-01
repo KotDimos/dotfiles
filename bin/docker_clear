@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PATH_LOGS="$HOME/.clear_docker_logs"
+PATH_LOGS="$HOME/.docker_clear_logs"
 
 
 if ! [[ -d "$PATH_LOGS" ]]
