@@ -76,6 +76,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+setopt HIST_IGNORE_SPACE
+
 plugins=( git
           docker
           docker-compose
@@ -127,6 +130,7 @@ PATH="$PATH:$GOPATH/bin"
 export GOPATH="$HOME/.go"
 export PY_COLORS=1
 export EDITOR=nvim
+export SSLKEYLOGFILE="$HOME/.ssl-key.log"
 
 # aliases
 alias vim="nvim"
