@@ -11,8 +11,8 @@ fi
 
 function clear_volumes() {
     echo "start clear volumes"
-    echo $(date) >> "$PATH_LOGS/volumes.log"
-    echo $(date) >> "$PATH_LOGS/volumes.err"
+    date >> "$PATH_LOGS/volumes.log"
+    date >> "$PATH_LOGS/volumes.err"
 
     docker volume ls --filter dangling=true --filter name="^[a-f0-9]{64}$" \
         | awk '{print $2}' | tail -n +2 | xargs -r docker volume rm \
@@ -28,8 +28,8 @@ function clear_volumes() {
 
 function clear_images() {
     echo "start clear images"
-    echo $(date) >> "$PATH_LOGS/images.log"
-    echo $(date) >> "$PATH_LOGS/images.err"
+    date >> "$PATH_LOGS/images.log"
+    date >> "$PATH_LOGS/images.err"
 
     docker image ls --filter dangling=true | awk '{print $3}' | tail -n +2 | xargs -r docker rmi \
         >> "$PATH_LOGS/images.log" \
@@ -44,8 +44,8 @@ function clear_images() {
 
 function clear_build() {
     echo "start clear build"
-    echo $(date) >> "$PATH_LOGS/build.log"
-    echo $(date) >> "$PATH_LOGS/build.err"
+    date >> "$PATH_LOGS/build.log"
+    date >> "$PATH_LOGS/build.err"
 
     echo "y" | docker builder prune \
         >> "$PATH_LOGS/build.log" \

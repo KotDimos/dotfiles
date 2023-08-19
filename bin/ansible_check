@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 if ! [[ $(which "ansible-lint") ]]
 then
@@ -12,14 +12,14 @@ then
     exit 1
 fi
 
-if [[ -z $1 ]]
+if [[ -z "$1" ]]
 then
     echo "error: no arguments"
     exit 1
 fi
 
 echo "==================== ansible-lint ===================="
-ansible-lint $1
+ansible-lint "$1"
 
 echo "==================== yamllint ===================="
-yamllint $1
+yamllint "$1"

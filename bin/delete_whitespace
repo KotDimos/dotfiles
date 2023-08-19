@@ -5,7 +5,7 @@ for arg in "$@"
 do
     if [[ -d "$arg" ]]
     then
-        for file in $(find $arg -type f -name "*")
+        for file in $(find "$arg" -type f -name "*")
         do
             sed -ri 's/[[:blank:]]*$//' "$file"
             echo "$file"
