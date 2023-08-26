@@ -18,5 +18,4 @@ sed "$line_containers,$ d" "$PATH_LOGS/all_docker_df"| tail -n +"$line_images" >
 sed "$line_volumes,$ d" "$PATH_LOGS/all_docker_df" | tail -n +"$line_containers" > "$PATH_LOGS/containers_docker_df"
 sed "$line_caches,$ d" "$PATH_LOGS/all_docker_df" | tail -n +"$line_volumes" > "$PATH_LOGS/volumes_docker_df"
 tail -n +"$line_caches" "$PATH_LOGS/all_docker_df" > "$PATH_LOGS/caches_docker_df"
-"$PATH_LOGS/images_docker_df" | sort -nk 10 > "$PATH_LOGS/images_docker_df_sorted"
-
+sort -nk 10 "$PATH_LOGS/images_docker_df" > "$PATH_LOGS/images_docker_df_sorted"
