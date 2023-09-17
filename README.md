@@ -12,20 +12,19 @@
 Описание скриптов.
 
 * ansible
-    * `ansible_check` - проверка ansible кода с помощью linters.
+    * `ansible-check` - проверка ansible кода с помощью linters.
 * docker
-    * `clear_docker` - очистка docker от лишних данных.
-    * `ctop_monitoring` - запуск ctop мониторинга в контейнере.
-    * `delete_whitespace` - удаление лишних пробелов в конце строки.
-    * `docker_logs_df` - просмотр размера логов контейнеров.
-    * `docker_df` - анализ и вывод данных docker.
-    * `find_docker` - поиск контейнеров по определённому параметру.
+    * `clear-docker` - очистка docker от лишних данных.
+    * `ctop-monitoring` - запуск ctop мониторинга в контейнере.
+    * `delete-whitespace` - удаление лишних пробелов в конце строки.
+    * `docker-logs-du` - просмотр размера логов контейнеров.
+    * `docker-df` - анализ и вывод данных docker.
 * minikube / kubernetes
-    * `minikube_delete` - удаление minikube.
-    * `minikube_start` - старт minikube.
-    * `minikube_update` - установка или обновление minikube.
+    * `minikube-delete` - удаление minikube.
+    * `minikube-start` - старт minikube.
+    * `minikube-update` - установка или обновление minikube.
 * tmux
-    * `tmux_start` - запуск tmux.
+    * `tmux-start` - запуск tmux.
 
 # Клонирование
 

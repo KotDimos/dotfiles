@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if [[ -z $1 ]]
-then
-    echo "error: no arguments"
-    exit
-fi
-
-docker ps -a | grep --color "$1"
