@@ -125,6 +125,7 @@ filetype plugin indent on
 set wrap
 " Подвсветка текущей строки
 set cursorline
+set cursorcolumn
 " Без бэкапов
 set nobackup
 " Без свап файлов
