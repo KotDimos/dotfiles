@@ -122,17 +122,20 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-# change variable $PATH
-PATH="$PATH:$HOME/.local/bin"
-PATH="$PATH:$HOME/bin"
-PATH="$PATH:$GOPATH/bin"
-
 export GOPATH="$HOME/.go"
+
+# change variable $PATH
+PATH="$HOME/bin:$PATH"
+PATH="$GOPATH/bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
+PATH="/usr/local/go/bin:$PATH"
+
 export PY_COLORS=1
 export EDITOR=nvim
-export SSLKEYLOGFILE="$HOME/.ssl-key.log"
 
 # aliases
 alias vim="nvim"
+alias k="kubectl"
+alias kn="kubectl -n"
 alias cat="bat"
 alias du1="du -h -d 1"
