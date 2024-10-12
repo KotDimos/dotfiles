@@ -23,8 +23,6 @@
     * `minikube-delete` - удаление minikube.
     * `minikube-start` - старт minikube.
     * `minikube-update` - установка или обновление minikube.
-* tmux
-    * `tmux-start` - запуск tmux.
 
 # Клонирование
 
