@@ -4,7 +4,7 @@
 
 * `.zshrc` - конфигурация для zsh.
 * `.tmux.conf` - конфигурация для tmux.
-* `init.vim` - конфигурация для vim/neovim (устарела, теперь лежит в [тут](https://github.com/KotDimos/KotNVim)).
+* `init.vim` - конфигурация для vim/neovim (устарела, теперь лежит в [тут](https://github.com/KotDimos/KotNeoVim)).
 * `.gitconfig` - глобальная конфигурация git.
 * `motd.sh` - приветсвенный скрипт при создании новой сессии.
 * `bin` - мои скрипты.
