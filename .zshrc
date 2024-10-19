@@ -83,6 +83,7 @@ plugins=( git
           docker
           docker-compose
           kubectl
+          istioctl
           mvn
           dnf
           helm
