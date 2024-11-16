@@ -129,7 +129,7 @@ export GOPATH="$HOME/.go"
 PATH="$HOME/bin:$PATH"
 PATH="$GOPATH/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
-PATH="/usr/local/go/bin:$PATH"
+PATH="$HOME/bin/go/bin:$PATH"
 
 export PY_COLORS=1
 export EDITOR=nvim
