@@ -18,7 +18,6 @@
 * docker
     * `clear-docker` - очистка docker от лишних данных.
     * `ctop-monitoring` - запуск ctop мониторинга в контейнере.
-    * `delete-whitespace` - удаление лишних пробелов в конце строки.
     * `docker-logs-du` - просмотр размера логов контейнеров.
     * `docker-df` - анализ и вывод данных docker.
 * minikube / kubernetes
