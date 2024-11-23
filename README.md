@@ -2,6 +2,19 @@
 
 Сборник моих файлов для восстановление системы.
 
+# Cloning repository
+
+ssh:
+```bash
+git clone git@github.com:KotDimos/dotfiles.git $HOME/.dotfiles
+```
+https:
+```bash
+git clone https://github.com/kotdimos/dotfiles.git $HOME/.dotfiles
+```
+
+# List scripts
+
 * `.zshrc` - конфигурация для zsh.
 * `.tmux.conf` - конфигурация для tmux.
 * `init.vim` - конфигурация для vim/neovim (устарела, теперь лежит в [тут](https://github.com/KotDimos/KotNeoVim)).
@@ -25,6 +38,4 @@
     * `minikube-start` - старт minikube.
     * `minikube-update` - установка или обновление minikube.
 
-# Клонирование
 
-    git clone $HOME/.dotfiles
