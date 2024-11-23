@@ -45,8 +45,10 @@ git clone https://github.com/kotdimos/dotfiles.git $HOME/.dotfiles
 ## Isntall zsh
 
 ```bash
-sudo dnf install zsh # Fedora
-sudo apt install zsh # Debian/Ubuntu
+dnf install zsh     # Fedora/RHEL
+apt install zsh     # Debian/Ubuntu
+pacman -S zsh       # Arch
+brew install zsh    # MacOS
 ```
 
 
