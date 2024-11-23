@@ -2,6 +2,7 @@
 
 Сборник моих файлов для восстановление системы.
 
+
 # Cloning repository
 
 ssh:
@@ -39,3 +40,41 @@ git clone https://github.com/kotdimos/dotfiles.git $HOME/.dotfiles
     * `minikube-update` - установка или обновление minikube.
 
 
+# Settings zsh
+
+## Isntall zsh
+
+```bash
+sudo dnf install zsh # Fedora
+sudo apt install zsh # Debian/Ubuntu
+```
+
+
+## Download oh-my-zsh
+
+(link)[https://ohmyz.sh/] for download oh-my-zsh
+
+## Add fonts
+
+[Link](https://github.com/romkatv/powerlevel10k#fonts) on official documents.
+
+
+## Install themes and plugins
+
+Theme powerlevel10k:
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh‑my‑zsh/custom}/themes/powerlevel10k
+```
+
+Plugins:
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-$HOME/.oh‑my‑zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh‑my‑zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+## Copy zshrc config
+
+```bash
+cp $HOME/.dotfiles/.zshrc $HOME/.zshrc
+source $HOME/.zshrc
+```
