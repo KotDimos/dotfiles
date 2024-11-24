@@ -80,3 +80,26 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 cp $HOME/.dotfiles/.zshrc $HOME/.zshrc
 source $HOME/.zshrc
 ```
+
+
+# Tmux settings
+
+## Cloning tmux plugin manager
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+## Copy config
+
+```bash
+cp $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
+```
+
+## Start install plugins
+
+```bash
+tmux new
+```
+
+Press `tmux-prefix` + `I`
