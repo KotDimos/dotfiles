@@ -54,7 +54,7 @@ brew install zsh    # MacOS
 
 ## Download oh-my-zsh
 
-(link)[https://ohmyz.sh/] for download oh-my-zsh
+[link](https://ohmyz.sh/) for download oh-my-zsh
 
 ## Add fonts
 
@@ -102,7 +102,7 @@ cp $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
 tmux new
 ```
 
-Press `tmux-prefix` + `I`
+Press `tmux-prefix` + `I` for install plugins
 
 ## Utils for clipboard
 
