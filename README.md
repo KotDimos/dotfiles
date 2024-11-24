@@ -103,3 +103,15 @@ tmux new
 ```
 
 Press `tmux-prefix` + `I`
+
+## Utils for clipboard
+
+for Xorg 11:
+```bash
+apt install xclip
+```
+
+for Wayland:
+```bash
+apt install wl-clipboard
+```
