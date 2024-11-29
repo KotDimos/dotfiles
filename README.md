@@ -16,28 +16,27 @@ git clone https://github.com/kotdimos/dotfiles.git $HOME/.dotfiles
 
 # List scripts
 
-* `.zshrc` - конфигурация для zsh.
-* `.tmux.conf` - конфигурация для tmux.
-* `init.vim` - конфигурация для vim/neovim (устарела, теперь лежит в [тут](https://github.com/KotDimos/KotNeoVim)).
-* `.gitconfig` - глобальная конфигурация git.
-* `motd.sh` - приветсвенный скрипт при создании новой сессии.
-* `bin` - мои скрипты.
+* `.zshrc` - config for zsh.
+* `.tmux.conf` - config for tmux.
+* `init.vim` - old vim config. My new config for neovim - [link](https://github.com/KotDimos/KotNeoVim).
+* `.gitconfig` - global config for git.
+* `motd.sh` - welcome script when creating a new session.
+* `bin` - my scripts.
+
 
 ## bin
 
-Описание скриптов.
-
 * ansible
-    * `ansible-check` - проверка ansible кода с помощью linters.
+    * `ansible-check` - checking ansible code using linters.
 * docker
-    * `clear-docker` - очистка docker от лишних данных.
-    * `ctop-monitoring` - запуск ctop мониторинга в контейнере.
-    * `docker-logs-du` - просмотр размера логов контейнеров.
-    * `docker-df` - анализ и вывод данных docker.
+    * `clear-docker` - cleaning docker of unnecessary data.
+    * `ctop-monitoring` - start ctop monitoring in the container.
+    * `docker-logs-du` - viewing the size of container logs.
+    * `docker-df` - analysis and output of docker data.
 * minikube / kubernetes
-    * `minikube-delete` - удаление minikube.
-    * `minikube-start` - старт minikube.
-    * `minikube-update` - установка или обновление minikube.
+    * `minikube-delete` - delete minikube.
+    * `minikube-start` - start minikube.
+    * `minikube-update` - install or update minikube.
 
 
 # Settings zsh
