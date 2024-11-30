@@ -1,8 +1,5 @@
 # my dotfiles
 
-Сборник моих файлов для восстановление системы.
-
-
 # Cloning repository
 
 ssh:
