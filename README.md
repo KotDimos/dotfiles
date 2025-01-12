@@ -17,6 +17,7 @@ git clone https://github.com/kotdimos/dotfiles.git $HOME/.dotfiles
 * `.tmux.conf` - config for tmux.
 * `init.vim` - old vim config. My new config for neovim - [link](https://github.com/KotDimos/KotNeoVim).
 * `.gitconfig` - global config for git.
+* `.gitmessage` - global message for git commit.
 * `motd.sh` - welcome script when creating a new session.
 * `bin` - my scripts.
 
