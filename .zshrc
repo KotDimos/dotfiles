@@ -138,6 +138,7 @@ export EDITOR=nvim
 
 # aliases
 alias vim="nvim"
+alias v="nvim"
 alias k="kubectl"
 alias kn="kubectl -n"
 alias cat="bat"
