@@ -1,24 +1,24 @@
 [user]
-	name = KotDimos
-	email = KotDimos@gmail.com
+  name = KotDimos
+  email = KotDimos@gmail.com
 
 [core]
-	editor = nvim
+  editor = nvim
 
 [help]
-	autocorrect = 1
+  autocorrect = 1
 
 [commit]
   template = ~/.gitmessage
 
 [alias]
-	tree = log --all --decorate --oneline --graph
+  tree = log --all --decorate --oneline --graph
 
 [pull]
-	rebase = True
+  rebase = True
 
 [rerere]
-	enabled = True
+  enabled = True
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
