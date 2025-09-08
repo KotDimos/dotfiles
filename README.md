@@ -14,6 +14,7 @@ git clone https://github.com/kotdimos/dotfiles.git $HOME/.dotfiles
 # List scripts
 
 * `.zshrc` - config for zsh.
+* `.kuberc` - config for kuberc.
 * `.tmux.conf` - config for tmux.
 * `init.vim` - old vim config. My new config for neovim - [link](https://github.com/KotDimos/KotNeoVim).
 * `.gitconfig` - global config for git.

@@ -1,0 +1,15 @@
+apiVersion: kubectl.config.k8s.io/v1beta1
+kind: Preference
+aliases:
+  - name: gp
+    command: get
+    prependArgs:
+      - pods
+  - name: gns
+    command: get
+    prependArgs:
+      - namespaces
+  - name: gno
+    command: get
+    prependArgs:
+      - nodes
