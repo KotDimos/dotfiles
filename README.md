@@ -66,19 +66,40 @@ Theme powerlevel10k:
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh‑my‑zsh/custom}/themes/powerlevel10k
 ```
 
-Plugins:
+Plugin autosuggestions:
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-$HOME/.oh‑my‑zsh/custom}/plugins/zsh-autosuggestions
+```
+
+Plugin highlighting:
+```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh‑my‑zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-## Copy zshrc config
+## Settings zshrc config
 
 ```bash
 cp $HOME/.dotfiles/.zshrc $HOME/.zshrc
 source $HOME/.zshrc
 ```
 
+or check this settings in `$HOME/.zshrc`
+```
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+plugins=( git
+          zsh-syntax-highlighting
+          zsh-autosuggestions
+        )
+
+source $ZSH/oh-my-zsh.sh
+```
+
+if you need to change the configuration, use the command
+```bash
+p10k configure
+```
 
 # Tmux settings
 
