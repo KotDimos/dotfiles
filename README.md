@@ -83,8 +83,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 ## Settings zshrc config
 
+Change config for zsh
 ```bash
 cp $HOME/.dotfiles/.zshrc $HOME/.zshrc
+```
+
+Update zsh config
+```bash
 source $HOME/.zshrc
 ```
 
