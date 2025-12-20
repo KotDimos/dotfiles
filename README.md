@@ -54,6 +54,11 @@ brew install zsh    # MacOS
 
 [Link](https://ohmyz.sh/) for download oh-my-zsh
 
+Or:
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 ## Add fonts
 
 [Link](https://github.com/romkatv/powerlevel10k#fonts) on official documents.
