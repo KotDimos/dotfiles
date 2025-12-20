@@ -104,6 +104,7 @@ PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/bin/nvim/bin:$PATH"
 PATH="$GOPATH/bin:$PATH"
 PATH="/usr/sbin:$PATH"
+PATH="/opt/homebrew/bin:$PATH"
 
 export PY_COLORS=1
 export EDITOR=nvim
