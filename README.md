@@ -52,7 +52,7 @@ brew install zsh    # MacOS
 
 ## Download oh-my-zsh
 
-[link](https://ohmyz.sh/) for download oh-my-zsh
+[Link](https://ohmyz.sh/) for download oh-my-zsh
 
 ## Add fonts
 
