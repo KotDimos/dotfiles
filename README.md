@@ -38,6 +38,16 @@ git clone https://github.com/kotdimos/dotfiles.git $HOME/.dotfiles
     * `minikube-update` - install or update minikube.
 
 
+# Install brew
+
+[Link](https://brew.sh) for site brew
+
+or:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+
 # Settings zsh
 
 ## Isntall zsh
@@ -133,7 +143,7 @@ tmux new
 
 Press `tmux-prefix` + `I` for install plugins
 
-## Utils for clipboard
+## Utils install for clipboard
 
 for Xorg 11:
 ```bash
@@ -143,4 +153,9 @@ apt install xclip
 for Wayland:
 ```bash
 apt install wl-clipboard
+```
+
+for MacOS:
+```bash
+brew install reattach-to-user-namespace
 ```
