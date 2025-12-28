@@ -11,7 +11,7 @@ https:
 git clone https://github.com/kotdimos/dotfiles.git $HOME/.dotfiles
 ```
 
-# List scripts
+# Configs
 
 * `.zshrc` - config for zsh.
 * `.kuberc` - config for kuberc.
