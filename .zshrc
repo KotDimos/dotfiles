@@ -83,7 +83,6 @@ plugins=( git
           istioctl
           golang
           mvn
-          dnf
           helm
           zsh-syntax-highlighting
           zsh-autosuggestions
