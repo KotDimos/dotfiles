@@ -121,6 +121,8 @@ if you need to change the configuration, use the command
 p10k configure
 ```
 
+To view all plugins, follow [link](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
+
 # Tmux settings
 
 ## Cloning tmux plugin manager
