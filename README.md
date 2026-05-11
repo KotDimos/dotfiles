@@ -161,3 +161,15 @@ for MacOS:
 ```bash
 brew install reattach-to-user-namespace
 ```
+
+# Copy git-configs
+
+Copy base git message
+```bash
+cp $HOME/.dotfiles/.gitmessage $HOME/.gitmessage
+```
+
+Copy global git config
+```bash
+cp $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
+```
